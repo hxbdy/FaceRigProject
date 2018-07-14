@@ -11,13 +11,33 @@ float min(int a, int b) {
 	return float(a > b ? b : a);
 }
 
+//”wŒi“§‰ß
+//RGB(0,255,0)‚ð“§‰ß
+cv::Mat trans2bg(cv::Mat source) {
+	cv::Mat alpha_image = cv::Mat(source.size(), CV_8UC3);
+	cv::cvtColor(source, alpha_image, CV_RGB2RGBA);
+	for (int y = 0; y < alpha_image.rows; ++y) {
+		for (int x = 0; x < alpha_image.cols; ++x) {
+			cv::Vec4b px = alpha_image.at<cv::Vec4b>(x, y);
+			if (px[1] == 255) {
+				px[3] = 0;
+				alpha_image.at<cv::Vec4b>(x, y) = px;
+			}
+		}
+	}
+	return alpha_image;
+}
+
+//”wŒi”»’è
+//bool isBG(cv::Mat* source,int x,int y){}
+
 int main() {
 	cv::Mat frame;
 	cv::Mat dst;
 	cv::VideoCapture cap;
 	int blue, green, red;
 	float m;
-	cap.open(0);
+	cap.open(2);
 	if (!cap.isOpened()) {
 		std::cout << "ERROR:Camera cannot be enable" << std::endl;
 		exit(-1);
@@ -27,8 +47,9 @@ int main() {
 	}
 	cap >> frame;
 	dst=frame.clone();
-	cv::imshow("dst", dst);
-	cv::waitKey(1);
+	cv::imshow("dst", trans2bg(dst));
+	//cv::imwrite("dst.png", trans2bg(dst));
+	cv::waitKey(0);
 	std::cout << "cols=" << frame.cols << " rows=" << frame.rows << std::endl;
 	std::cout << "channels=" << frame.channels() << std::endl;
 	while (true) {
@@ -56,5 +77,5 @@ int main() {
 	}
 	cv::destroyAllWindows();
 
-		return 0;
+	return 0;
 }

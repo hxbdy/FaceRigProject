@@ -3,6 +3,6 @@ c:\users\ryuki\documents\visual studio 2015\projects\facerigproject\packages\ope
 c:\users\ryuki\documents\visual studio 2015\projects\facerigproject\packages\opencv3.1.1.0\build\native\include\opencv2\core\persistence.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
 c:\users\ryuki\documents\visual studio 2015\projects\facerigproject\packages\opencv3.1.1.0\build\native\include\opencv2\core\utility.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
 c:\users\ryuki\documents\visual studio 2015\projects\facerigproject\packages\opencv3.1.1.0\build\native\include\opencv2\core\utility.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-c:\users\ryuki\documents\visual studio 2015\projects\facerigproject\facerigproject\main.cpp(42): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-  FaceRigProject.vcxproj -> c:\users\ryuki\documents\visual studio 2015\Projects\FaceRigProject\Debug\FaceRigProject.exe
-  FaceRigProject.vcxproj -> c:\users\ryuki\documents\visual studio 2015\Projects\FaceRigProject\Debug\FaceRigProject.pdb (Partial PDB)
+c:\users\ryuki\documents\visual studio 2015\projects\facerigproject\facerigproject\main.cpp(63): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+  FaceRigProject.vcxproj -> C:\Users\Ryuki\documents\visual studio 2015\Projects\FaceRigProject\Debug\FaceRigProject.exe
+  FaceRigProject.vcxproj -> C:\Users\Ryuki\documents\visual studio 2015\Projects\FaceRigProject\Debug\FaceRigProject.pdb (Partial PDB)
